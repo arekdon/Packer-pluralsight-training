@@ -1,0 +1,16 @@
+{
+    "builders": [
+        "type": "amazon-ebs",
+        "region": "eu-west-1",
+        "source_ami": "ami-acd005d5",
+        "instance_type": "t2.micro",
+        "ami_name": "MiddleTier-{{isotime | clean_ami_name }}",
+        "tags": {
+            "role": "MiddleTier"
+        }
+        "running_tags": {
+            "role": "buildSystem"
+        }
+    ]
+
+}
